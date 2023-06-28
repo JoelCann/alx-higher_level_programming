@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-def weight_average(my_list=[]):
-    if my_list and len(my_list):
-        num = 0
-        dem = 0
-        for tup in my_list:
-            num += (tup[0] * tup[1])
-            dem += tup[1]
-        return (num / dem)
+def weight_average(the_list=[]):
+    if the_list and len(the_list):
+        no. = 0
+        d = 0
+        for t in the_list:
+            no. += (t[0] * t[1])
+            d += t[1]
+        return (no. / d)
     return 0
