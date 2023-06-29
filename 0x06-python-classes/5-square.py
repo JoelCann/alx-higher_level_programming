@@ -1,43 +1,43 @@
 #!/usr/bin/python3
-"""Defines a class Square"""
+"""Defining class Square"""
 
 
 class Square:
-    """Represents a square
+    """ a square
     Attributes:
-        __size (int): size of a side of the square
+        __size (int): length of a side of the square
     """
-    def __init__(self, size=0):
-        """initializes the square
+    def __init__(the_square, size=0):
+        """initializing the square
         Args:
-            size (int): size of a side of the square
+            size (int): length of a side of the square
         Returns:
-            None
+            Nothing
         """
-        self.size = size
+        the_square.size = size
 
-    def area(self):
-        """calculates the square's area
+    def area(the_square):
+        """calculating the square's area
         Returns:
-            The area of the square
+            area of the square
         """
-        return (self.__size) ** 2
+        return (the_square.__size) ** 2
 
     @property
-    def size(self):
-        """getter of __size
+    def size(the_square):
+        """getting of __size
         Returns:
-            The size of the square
+            length of the square
         """
-        return self.__size
+        return the_square.__size
 
     @size.setter
-    def size(self, value):
-        """setter of __size
+    def size(the_square, value):
+        """setting of __size
         Args:
-            value (int): size of a side of the square
+            value (int): length of a side of the square
         Returns:
-            None
+            Nothing
         """
         if type(value) is not int:
             raise TypeError("size must be an integer")
@@ -45,15 +45,15 @@ class Square:
             if value < 0:
                 raise ValueError("size must be >= 0")
             else:
-                self.__size = value
+                the_square.__size = value
 
-    def my_print(self):
+    def my_print(the_square):
         """prints the square
         Returns:
-            None
+            Nothing
         """
-        if self.__size == 0:
+        if the_square.__size == 0:
             print()
             return
-        for i in range(self.__size):
-            print("".join(["#" for j in range(self.__size)]))
+        for i in range(the_square.__size):
+            print("".join(["#" for j in range(the_square.__size)]))
