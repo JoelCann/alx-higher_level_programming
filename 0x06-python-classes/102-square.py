@@ -1,54 +1,54 @@
 #!/usr/bin/python3
-"""Define a class Square."""
+"""Defines a class Square."""
 
 
 class Square:
-    """Represent a square."""
+    """Represents a square."""
 
-    def __init__(self, size=0):
-        """Initialize a new square.
+    def __init__(the_square, size=0):
+        """Initializes a new square.
         Args:
-            size (int): The size of the new square.
+            size (int): The length of the new square.
         """
-        self.size = size
+        the_square.size = size
 
     @property
-    def size(self):
-        """Get/set the current size of the square."""
-        return (self.__size)
+    def size(the_square):
+        """Gets the current size of the square."""
+        return (the_square.__size)
 
     @size.setter
-    def size(self, value):
+    def size(the_square, value):
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
-        self.__size = value
+        the_square.__size = value
 
-    def area(self):
-        """Return the current area of the square."""
-        return (self.__size * self.__size)
+    def area(the_square):
+        """Returns the current area of the square."""
+        return (the_square.__size * the_square.__size)
 
-    def __eq__(self, other):
-        """Define the == comparision to a Square."""
-        return self.area() == other.area()
+    def __eq__(the_square, other):
+        """Defines the == comparision to a Square."""
+        return the_square.area() == other.area()
 
-    def __ne__(self, other):
-        """Define the != comparison to a Square."""
-        return self.area() != other.area()
+    def __ne__(the_square, other):
+        """Defines the != comparison to a Square."""
+        return the_square.area() != other.area()
 
-    def __lt__(self, other):
-        """Define the < comparison to a Square."""
-        return self.area() < other.area()
+    def __lt__(the_square, other):
+        """Defines the < comparison to a Square."""
+        return the_square.area() < other.area()
 
-    def __le__(self, other):
+    def __le__(thse_square, other):
         """Define the <= comparison to a Square."""
-        return self.area() <= other.area()
+        return the_square.area() <= other.area()
 
-    def __gt__(self, other):
-        """Define the > comparison to a Square."""
-        return self.area() > other.area()
+    def __gt__(the_square, other):
+        """Defines the > comparison to a Square."""
+        return the_square.area() > other.area()
 
-    def __ge__(self, other):
-        """Define the >= compmarison to a Square."""
-        return self.area() >= other.area()
+    def __ge__(the_square, other):
+        """Defines the >= compmarison to a Square."""
+        return the_square.area() >= other.area()
