@@ -1,46 +1,46 @@
 #!/usr/bin/python3
-"""Defines a class Square"""
+"""Defining a class Square"""
 
 
 class Square:
-    """Represents a square
+    """ a square
     Attributes:
-        __size (int): size of a size of the square
-        __position (tuple): position of the square in 2D space
+        __size (int): length of a size of the square
+        __position (tuple): position of the square in 2D dimention
     """
-    def __init__(self, size=0, position=(0, 0)):
-        """initializes the square
+    def __init__(the_square, size=0, position=(0, 0)):
+        """initializing the square
         Args:
-            size (int): size of a side of the square
-            position (tuple): positoin of the square in 2D space
+            size (int): length of a side of the square
+            position (tuple): positoin of the square in 2D dimention
         Returns:
-            None
+            Nothing
         """
-        self.size = size
-        self.position = position
+        the_square.size = size
+        the_square.position = position
 
-    def area(self):
-        """calculates the square's area
+    def area(the_square):
+        """calculating the square's area
         Returns:
-            The area of the square
+            area of the square
         """
         return (self.__size) ** 2
 
     @property
-    def size(self):
-        """getter of __size
+    def size(the_square):
+        """getting of __size
         Returns:
-            The size of the square
+            size of the square
         """
-        return self.__size
+        return the_square.__size
 
     @size.setter
-    def size(self, value):
-        """setter of __size
+    def size(the_square, value):
+        """setting of __size
         Args:
-            value (int): size of a side of the square
+            value (int): length of a side of the square
         Returns:
-            None
+            Nothing
         """
         if type(value) is not int:
             raise TypeError("size must be an integer")
@@ -48,17 +48,17 @@ class Square:
             if value < 0:
                 raise ValueError("size must be >= 0")
             else:
-                self.__size = value
+                the_square.__size = value
 
-    def my_print(self):
+    def my_print(the_square):
         """prints the square
         Returns:
-            None
+            Nothing
         """
-        if self.__size == 0:
+        if the_square.__size == 0:
             print()
             return
-        for i in range(self.__position[1]):
+        for i in range(the_square.__position[1]):
             print()
         for j in range(self.__size):
             print("".join([" " for k in range(self.__position[0])]), end="")
@@ -66,15 +66,15 @@ class Square:
 
     @property
     def position(self):
-        """getter of __position
+        """getting of __position
         Returns:
-            The position of the square in 2D space
+            position of the square in 2D space
         """
-        return self.__position
+        return the_square.__position
 
     @position.setter
-    def position(self, value):
-        """setter of __position
+    def position(the_square, value):
+        """setting of __position
         Args:
             value (tuple): position of the square in 2D space
         Returns:
@@ -85,4 +85,4 @@ class Square:
            type(value[1]) is not int or value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
-            self.__position = value
+            the_square.__position = value
