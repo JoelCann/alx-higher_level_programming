@@ -24,7 +24,7 @@ class Square:
         Returns:
             area of the square
         """
-        return (self.__size) ** 2
+        return (the_square.__size) ** 2
 
     @property
     def size(the_square):
@@ -60,12 +60,12 @@ class Square:
             return
         for i in range(the_square.__position[1]):
             print()
-        for j in range(self.__size):
-            print("".join([" " for k in range(self.__position[0])]), end="")
-            print("".join(["#" for l in range(self.__size)]))
+        for j in range(the_square.__size):
+            print("".join([" " for k in range(the_square.__position[0])]), end="")
+            print("".join(["#" for l in range(the_square.__size)]))
 
     @property
-    def position(self):
+    def position(the_square):
         """getting of __position
         Returns:
             position of the square in 2D space
