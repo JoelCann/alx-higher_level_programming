@@ -13,12 +13,12 @@ class Rectangle:
 
     @property
     def width(self):
-        """getter for the private instance attribute width"""
+        """gets input for private instance attribute width"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """setter for the private instance attribute width"""
+        """sets received input for private instance attribute width"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
@@ -27,12 +27,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """getter for the private instance attribute height"""
+        """gets input for the private instance attribute height"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """setter for the private instance attribute height"""
+        """sets received input for the private instance attribute height"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
