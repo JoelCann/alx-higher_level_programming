@@ -1,1 +1,1 @@
-# 0x09. Python - Everything is object
+Folder containing project files for the 0x09 python project.
