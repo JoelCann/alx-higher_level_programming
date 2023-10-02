@@ -4,44 +4,44 @@ The ``5-`text_indentation` module
 Using ``text_indentation``
 -------------------
 
-Importing the function from the module:
+Imports the function from the module:
 	>>> text_indentation = __import__("5-text_indentation").text_indentation
 
-Checking for module docstring:
+Checks for module docstring:
 	 >>> m = __import__("5-text_indentation").__doc__
 	 >>> len(m) > 1
 	 True
 
-Checking for function docstring:
+Checks for function docstring:
 	 >>> f = __import__("5-text_indentation").text_indentation.__doc__
          >>> len(f) > 1
          True
 
-Checking for no args:
+Checks for no args:
 	 >>> text_indentation()
 	 Traceback (most recent call last):
 	 ...
 	 TypeError: text_indentation() missing 1 required positional argument: 'text'
 
-Checking for too many args:
+Checks for too many args:
 	 >>> text_indentation("Hello", "Hi")
 	 Traceback (most recent call last):
 	 ...
 	 TypeError: text_indentation() takes 1 positional argument but 2 were given
 
-Checking for passing None:
+Checks for passing None:
 	 >>> text_indentation(None)
 	 Traceback (most recent call last):
 	 ...
 	 TypeError: text must be a string
 
-Checking for passing non-string type:
+Checks for passing non-string type:
 	 >>> text_indentation(1)
          Traceback (most recent call last):
          ...
          TypeError: text must be a string
 
-Checking for endingin special char:
+Checks for endingin special char:
 	 >>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: Plus semper voluptatis? Teneo, inquit, finem illi videri nihil dolere. Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens. Si id dicis, vicimus. Inde sermone vario sex illa a Dipylo stadia confecimus. Sin aliud quid voles, postea. Quae animi affectio suum cuique tribuens atque hanc, quam dico. Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres.""")
 	 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 	 <BLANKLINE> 
@@ -72,7 +72,7 @@ Checking for endingin special char:
 	 Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres.
 	 <BLANKLINE>
 
-Checking for ending in non-special char:
+Checks for ending in non-special char:
          >>> text_indentation("""Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere? Non autem hoc: igitur ne illud quidem. Fortasse id optimum, sed ubi illud: Plus semper voluptatis? Teneo, inquit, finem illi videri nihil dolere. Transfer idem ad modestiam vel temperantiam, quae est moderatio cupiditatum rationi oboediens. Si id dicis, vicimus. Inde sermone vario sex illa a Dipylo stadia confecimus. Sin aliud quid voles, postea. Quae animi affectio suum cuique tribuens atque hanc, quam dico. Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres""")
          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
          <BLANKLINE>
@@ -102,14 +102,14 @@ Checking for ending in non-special char:
          <BLANKLINE>
          Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
 
-Checking for multiple spaces:
+Checks for multiple spaces:
 	 >>> text_indentation("   Hello.  How are you?   ")
 	 Hello.
 	 <BLANKLINE>
 	 How are you?
 	 <BLANKLINE>
 
-Checking for standalone special chars:
+Checks for standalone special chars:
 	 >>> text_indentation(" . ? : ")
 	 .
 	 <BLANKLINE>
@@ -118,11 +118,11 @@ Checking for standalone special chars:
 	 :
 	 <BLANKLINE>
 
-Checking for one word:
+Checks for one word:
 	 >>> text_indentation("Hello")
 	 Hello
 
-Checking for newline at beginning:
+Checks for newline at beginning:
 	 >>> text_indentation(" \n Hello. Whatcha up to?")
 	 <BLANKLINE>
 	  Hello.
@@ -130,7 +130,7 @@ Checking for newline at beginning:
 	 Whatcha up to?
 	 <BLANKLINE>
  
-Checking for newline in middle:
+Checks for newline in middle:
 	 >>> text_indentation("Hello \n . How are you?")
 	 Hello 
 	  .
@@ -138,7 +138,7 @@ Checking for newline in middle:
 	 How are you?
 	 <BLANKLINE>
 
-Checking for newline at end:
+Checks for newline at end:
 	 >>> text_indentation("Hello, how are you?\n")
 	 Hello, how are you?
 	 <BLANKLINE>
