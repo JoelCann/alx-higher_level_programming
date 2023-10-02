@@ -1,17 +1,17 @@
 #!/usr/bin/python3
-"""Module for class MyInt"""
+"""Module for the class MyInt"""
 
 
 class MyInt(int):
-    """class MyInt swaps == and !="""
+    """class to swap == and !="""
     def __eq__(self, other):
         """Swap == with !=
 
         Args:
-            other: object to compare
+            other: the object be compared
 
-        Returns: True if value and self are differents
-                False in otherwise
+        Returns: True if value and self are same and
+                False if otherwise
         """
         return super().__ne__(other)
 
@@ -19,9 +19,9 @@ class MyInt(int):
         """Swap != with ==
 
         Args:
-            other: object to compare
+            other: the object to compared
 
-        Returns: False if value and self are iqual
-                True in otherwise
+        Returns: False if value and self are unequal
+                True if otherwise
         """
         return super().__eq__(other)
