@@ -1,24 +1,23 @@
 #!/usr/bin/python3
-""a Module for pascal_triangule method"""
+"""contains a function that returns a
+list of lists of integers
+"""
 
 
 def pascal_triangle(n):
-    """
-    this Method inserts a line of text to a file,
-    after each line containing a specific string
+    """a function that returns a
+    list of lists of integers
     """
     if n <= 0:
         return []
 
-    if n == 1:
-        return [[1]]
+    triangle = [[1]]
+    for i in range(1, n):
+        row = [1]
+        prev_row = triangle[i - 1]
+        for j in range(1, i):
+            row.append(prev_row[j - 1] + prev_row[j])
+        row.append(1)
+        triangle.append(row)
 
-    list_pascal = [[1], [1, 1]]
-
-    for row in range(1, n-1):
-        line = [1]
-        for elem in range(0, len(list_pascal[row])-1):
-            line.extend([list_pascal[row][elem] + list_pascal[row][elem+1]])
-        line += [1]
-        list_pascal.append(line)
-    return list_pascal
+    return triangle
