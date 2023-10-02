@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 100-main """
+""" task 100-main """
 from models.rectangle import Rectangle
 from models.square import Square
 
