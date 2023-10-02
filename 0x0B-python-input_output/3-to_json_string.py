@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""a Module for to_json_string Method"""
+"""Module for to_json_string Method"""
 import json
 
 
