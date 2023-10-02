@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-"""Module for class Rectangle"""
+"""Module for the class Rectangle"""
 Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
-    """class Square that inherits from Rectangle"""
+    """a class Square that inherits from Rectangle"""
     def __init__(self, size):
-        """new instance of Rectangle
+        """a new instance of classRectangle
 
         Args:
-            size: size of the square
+            size: the size of the square
         """
         self.integer_validator("size", size)
         self.__size = size

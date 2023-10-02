@@ -4,33 +4,33 @@ The ``7-base_geometry`` module
 Using ``print_sorted``
 --------------------
 
-Importing the function from the module:
+Imports the function from the module:
         >>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
 		>>> bg = BaseGeometry()
 
-Checking create bg with parameters
+Checks for create bg with parameters
 		>>> bg = BaseGeometry(7, 9)
 		Traceback (most recent call last):
 			...
 		TypeError: __init__() takes 1 positional argument but 3 were given
 
-Checking regular case
+Checks for regular case
 		>>> bg.integer_validator("my_int", 12)
 		>>> bg.integer_validator("width", 89)
 
-Checking with value 0
+Checks for with value 0
 		>>> bg.integer_validator("zero", 0)
 		Traceback (most recent call last):
 			...
 		ValueError: zero must be greater than 0
 
-Checking with negative value
+Checks for with negative value
 		>>> bg.integer_validator("negative", -3)
 		Traceback (most recent call last):
 			...
 		ValueError: negative must be greater than 0
 
-Checking area():
+Checks for area():
 		>>> bg.area()
 		Traceback (most recent call last):
 			...
