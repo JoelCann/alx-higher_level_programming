@@ -1,1 +1,0 @@
-tasks for the python inheritance class project
